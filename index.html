@@ -8,28 +8,30 @@
     </head>
     <body>
         <div id="app">
+            {{ message }}
             <div class="title">
                 <img src="title.png" alt="你好！我是 KYLN24" />
             </div>
             <div class="figure">
                 <img src="figure.png" alt="这是我" />
             </div>
-            <div class="nav">
+            <nav>
                 <ul>
                     <li v-for="(item, index) in data.tab" :key="index">
-                        {{item.title}}: {{item.subTitle}}
+                        {{ item.title }}: {{ item.subTitle }}
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue" />
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
         <script>
             const app = new Vue({
-                el: ".app",
+                el: "#app",
                 data: {
+                    message: "hello",
                     tab: [
                         {
-                            title: "做了些啥",
+                            title: "Project",
                             subTitle: "一些有趣的小玩意儿～",
                             link: "/project",
                         },
@@ -45,12 +47,11 @@
                         },
                         {
                             title: "GitHub",
-                            subTitle: "看看我的首页",
+                            subTitle: "看看我的 GitHub 首页",
                             link: "https://github.com/KYLN24",
                         },
                     ],
                 },
-                methods: {},
             });
         </script>
     </body>
