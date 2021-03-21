@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>我是 KYLN24</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="title">
+                <img src="title.png" alt="你好！我是 KYLN24" />
+            </div>
+            <div class="figure">
+                <img src="figure.png" alt="这是我" />
+            </div>
+            <div class="nav">
+                <ul>
+                    <li v-for="(item, index) in data.tab" :key="index">
+                        {{item.title}}: {{item.subTitle}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue" />
+        <script>
+            const app = new Vue({
+                el: ".app",
+                data: {
+                    tab: [
+                        {
+                            title: "做了些啥",
+                            subTitle: "一些有趣的小玩意儿～",
+                            link: "/project",
+                        },
+                        {
+                            title: "learnSpace",
+                            subTitle: "KYLN 的技术博客",
+                            link: "/learnSpace",
+                        },
+                        {
+                            title: "Elsewhere",
+                            subTitle: "KYLN 的一隅小站",
+                            link: "/elsewhere",
+                        },
+                        {
+                            title: "GitHub",
+                            subTitle: "看看我的首页",
+                            link: "https://github.com/KYLN24",
+                        },
+                    ],
+                },
+                methods: {},
+            });
+        </script>
+    </body>
+</html>
