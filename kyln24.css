@@ -1,21 +1,40 @@
 /* ky main nav */
 
 .ky-main-nav {
+    margin: 10px;
 }
 
 .ky-main-nav ul {
+    position: relative;
     list-style: none;
+    transform: skewX(-10deg);
 }
 
 .ky-main-nav ul li {
+    position: relative;
+    margin: 10px;
+    transform: skewX(10deg);
 }
 
-.ky-main-nav ul li a {
-    font-size: 2em;
+.ky-main-nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-15deg);
+    background-color: rgb(169, 209, 255);
+    z-index: -1;
 }
 
-.ky-main-nav ul li span {
-    font-size: 1.5em;
+.ky-main-nav ul li .title {
+    color: #007bff;
+    font-size: 2.5em;
+}
+
+.ky-main-nav ul li .sub-title {
+    font-size: 1em;
 }
 
 /* ky main nav END */

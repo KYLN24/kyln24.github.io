@@ -30,10 +30,14 @@
             </div>
             <nav class="ky-main-nav">
                 <ul>
-                    <li v-for="item in mainNav" :key="item.id">
-                        <a :href="item.link">{{ item.title }}</a>
+                    <li
+                        v-for="item in mainNav"
+                        :key="item.id"
+                        @click="window.location.assign(item.link)"
+                    >
+                        <span class="title">{{ item.title }}</span>
                         <br />
-                        <span>{{ item.subTitle }}</span>
+                        <span class="sub-title">{{ item.subTitle }}</span>
                     </li>
                 </ul>
             </nav>
