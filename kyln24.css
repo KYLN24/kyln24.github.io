@@ -1,0 +1,20 @@
+/* ky main nav */
+
+#ky-main-nav {
+    font-size: 2em;
+}
+
+#ky-main-nav ul {
+    list-style: none;
+}
+
+#ky-main-nav ul li {
+}
+
+#ky-main-nav ul :first-child {
+}
+
+#ky-main-nav ul :last-child {
+}
+
+/* ky main nav END */

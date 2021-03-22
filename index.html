@@ -4,55 +4,43 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        />
+        <link
+            href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="kyln24.css" />
         <title>我是 KYLN24</title>
     </head>
     <body>
         <div id="app">
-            {{ message }}
             <div class="title">
                 <img src="title.png" alt="你好！我是 KYLN24" />
             </div>
             <div class="figure">
-                <img src="figure.png" alt="这是我" />
+                <img src="figure.png" alt="KYLN24" />
             </div>
-            <nav>
+            <nav class="ky-main-nav">
                 <ul>
-                    <li v-for="(item, index) in data.tab" :key="index">
-                        {{ item.title }}: {{ item.subTitle }}
+                    <li v-for="item in mainNav" :key="item.id">
+                        <span>{{ item.title }}</span>
+                        <br />
+                        <span>{{ item.subTitle }}</span>
                     </li>
                 </ul>
             </nav>
         </div>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
-        <script>
-            const app = new Vue({
-                el: "#app",
-                data: {
-                    message: "hello",
-                    tab: [
-                        {
-                            title: "Project",
-                            subTitle: "一些有趣的小玩意儿～",
-                            link: "/project",
-                        },
-                        {
-                            title: "learnSpace",
-                            subTitle: "KYLN 的技术博客",
-                            link: "/learnSpace",
-                        },
-                        {
-                            title: "Elsewhere",
-                            subTitle: "KYLN 的一隅小站",
-                            link: "/elsewhere",
-                        },
-                        {
-                            title: "GitHub",
-                            subTitle: "看看我的 GitHub 首页",
-                            link: "https://github.com/KYLN24",
-                        },
-                    ],
-                },
-            });
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>
