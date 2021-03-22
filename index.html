@@ -31,7 +31,7 @@
             <nav class="ky-main-nav">
                 <ul>
                     <li v-for="item in mainNav" :key="item.id">
-                        <span>{{ item.title }}</span>
+                        <a :href="item.link">{{ item.title }}</a>
                         <br />
                         <span>{{ item.subTitle }}</span>
                     </li>

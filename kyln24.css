@@ -1,20 +1,21 @@
 /* ky main nav */
 
-#ky-main-nav {
-    font-size: 2em;
+.ky-main-nav {
 }
 
-#ky-main-nav ul {
+.ky-main-nav ul {
     list-style: none;
 }
 
-#ky-main-nav ul li {
+.ky-main-nav ul li {
 }
 
-#ky-main-nav ul :first-child {
+.ky-main-nav ul li a {
+    font-size: 2em;
 }
 
-#ky-main-nav ul :last-child {
+.ky-main-nav ul li span {
+    font-size: 1.5em;
 }
 
 /* ky main nav END */
