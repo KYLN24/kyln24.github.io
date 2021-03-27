@@ -1,8 +1,8 @@
 /* ky main nav */
 
 .ky-main-nav {
-    margin: 10px;
-    transition: all 0.2s linear;
+    right: 36px;
+    bottom: 10px;
 }
 
 .ky-main-nav ul {
@@ -31,7 +31,7 @@
 
 .ky-main-nav ul li:hover::before {
     transition: 0.2s;
-    box-shadow: 5px 5px 2px #175da870;
+    box-shadow: 7px 7px 14px #4488cfb0;
 }
 
 .ky-main-nav ul li .title {
