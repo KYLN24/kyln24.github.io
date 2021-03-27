@@ -54,3 +54,45 @@
         }
     }
 }
+
+.ky-main-title {
+    font-family: monospace;
+    .title {
+        position: relative;
+        top: 0.8em;
+        animation: 0.2s swift-up ease-out forwards;
+        font-weight: bold;
+        font-size: 4.5em;
+        overflow: hidden;
+        span {
+            position: relative;
+            top: 0.8em;
+            animation: 0.5s swift-up ease-out forwards;
+            overflow: hidden;
+            i {
+                font-style: normal;
+                position: relative;
+                top: 2.8em;
+                animation: 0.8s swift-up ease-out forwards;
+            }
+        }
+    }
+    .sub-title {
+        font-size: 2em;
+        position: relative;
+        top: 0.8em;
+        opacity: 0;
+        animation: 0.3s fade-in ease-out forwards,
+            0.3s swift-up ease-out forwards;
+    }
+    @keyframes swift-up {
+        to {
+            top: 0;
+        }
+    }
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+        }
+    }
+}

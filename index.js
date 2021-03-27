@@ -1,6 +1,10 @@
 const app = new Vue({
     el: "#app",
     data: {
+        titleWord: {
+            title: [["Hello,"], ["I'm", "KYLN24"]],
+            subTitle: [["Welcome", "to", "my", "homepage!"]],
+        },
         mainNav: [
             {
                 id: 1,
