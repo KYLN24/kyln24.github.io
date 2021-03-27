@@ -1,0 +1,39 @@
+.main-top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20vh;
+    color: #ffffff;
+    font-size: 3em;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        top: -1em;
+        left: -1em;
+        right: -1em;
+        bottom: -1em;
+        background-color: rgba(0, 0, 0, 0.8);
+        filter: saturate(180%) blur(10px);
+    }
+}
+
+.project-container {
+    position: relative;
+    z-index: -1;
+    margin: 20px;
+    top: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .project {
+        margin: 10px;
+        width: 25em;
+    }
+}

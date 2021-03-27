@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Project - KYLN24</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        />
+
+        <link rel="stylesheet/less" href="project.less" />
+
+        <script src="https://cdn.bootcdn.net/ajax/libs/less.js/4.1.1/less.min.js"></script>
     </head>
     <body>
-        <div style="text-align: center; top: 5em; font-size: 3em">
-            <p>这里目前还什么都没有</p>
-            <a href="/../">回到首页</a>
+        <div id="app">
+            <div class="main-top-nav">Project: 一些有趣的小玩意儿～</div>
+            <div class="project-container">
+                <div
+                    class="project"
+                    v-for="(proj, projId) in projects"
+                    :key="projId"
+                >
+                    <img :src="proj.icon" :alt="proj.displayName" />
+                    <img :src="proj.image" alt="proj.displayName" />
+                    {{ projId }}: {{ proj.displayName }}<br />
+                    {{ proj.projectName }}<br />
+                    {{ proj.identifier }}<br />
+                    {{ proj.description }}<br />
+                    {{ proj.repository }}<br />
+                </div>
+            </div>
         </div>
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+        <script src="project.js"></script>
     </body>
 </html>
