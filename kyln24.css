@@ -2,21 +2,22 @@
 
 .ky-main-nav {
     margin: 10px;
+    transition: all 0.2s linear;
 }
 
 .ky-main-nav ul {
-    position: relative;
     list-style: none;
     transform: skewX(-10deg);
 }
 
 .ky-main-nav ul li {
-    position: relative;
+    cursor: pointer;
     margin: 10px;
     transform: skewX(10deg);
 }
 
 .ky-main-nav ul li::before {
+    transition: 0.2s;
     content: "";
     position: absolute;
     top: 0;
@@ -28,13 +29,38 @@
     z-index: -1;
 }
 
+.ky-main-nav ul li:hover::before {
+    transition: 0.2s;
+    box-shadow: 5px 5px 2px #175da870;
+}
+
 .ky-main-nav ul li .title {
+    transition: 0.5s;
+    display: block;
+    position: relative;
+    bottom: -0.3em;
+    left: 0em;
     color: #007bff;
     font-size: 2.5em;
 }
 
+.ky-main-nav ul li:hover .title {
+    transition: 0.5s;
+    bottom: 0;
+    left: -0.2em;
+}
+
 .ky-main-nav ul li .sub-title {
+    transition: 0.5s;
     font-size: 1em;
+    display: block;
+    color: #002d5e;
+    opacity: 0;
+}
+
+.ky-main-nav ul li:hover .sub-title {
+    transition: 0.5s;
+    opacity: 1;
 }
 
 /* ky main nav END */
