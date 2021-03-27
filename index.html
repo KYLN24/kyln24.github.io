@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>I'm KYLN24</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+        <link rel="stylesheet/less" href="index.less" />
+        <link rel="stylesheet/less" href="kyln24.less" />
+
+        <script src="https://cdn.bootcdn.net/ajax/libs/less.js/4.1.1/less.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="ky-main-title">
+                <div
+                    class="title"
+                    v-for="(titleSec,secIndex) in titleWord.title"
+                >
+                    <span
+                        v-for="(word, wordIndex) in titleSec"
+                        :style="'animation-delay: '+ (secIndex/10+wordIndex/20) + 's;'"
+                        ><i
+                            :style="'animation-delay: '+ (secIndex/10+wordIndex/10) + 's;'"
+                        >
+                            {{word}}</i
+                        ></span
+                    >
+                </div>
+                <div
+                    class="sub-title"
+                    v-for="(subTitleSec,secIndex) in titleWord.subTitle"
+                    :style="'animation-delay: ' + titleWord.title.length * 0.5 + 's; '"
+                >
+                    <span v-for="word in subTitleSec"> {{word}}</span>
+                </div>
+            </div>
+            <nav class="ky-main-nav">
+                <ul>
+                    <li
+                        v-for="item in mainNav"
+                        :key="item.id"
+                        @click="window.location.assign(item.link)"
+                    >
+                        <span class="title">{{ item.title }}</span>
+                        <span class="sub-title">{{ item.subTitle }}</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+.ky-main-nav {
+    right: 36px;
+    bottom: 10px;
+    ul {
+        list-style: none;
+        transform: skewX(-10deg);
+        li {
+            cursor: pointer;
+            margin: 10px;
+            transform: skewX(10deg);
+            &::before {
+                transition: 0.2s;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transform: skewX(-15deg);
+                background-color: rgb(169, 209, 255);
+                z-index: -1;
+            }
+            .title {
+                transition: 0.5s;
+                display: block;
+                position: relative;
+                bottom: -0.3em;
+                left: 0em;
+                color: #007bff;
+                font-size: 2.5em;
+            }
+            .sub-title {
+                transition: 0.5s;
+                font-size: 1em;
+                display: block;
+                color: #002d5e;
+                opacity: 0;
+            }
+            &:hover {
+                &::before {
+                    transition: 0.2s;
+                    box-shadow: 7px 7px 14px #4488cfb0;
+                }
+                .sub-title {
+                    transition: 0.5s;
+                    opacity: 1;
+                }
+                .title {
+                    transition: 0.5s;
+                    bottom: 0;
+                    left: -0.2em;
+                }
+            }
+        }
+    }
+}
+
+.ky-main-title {
+    font-family: monospace;
+    .title {
+        position: relative;
+        top: 0.8em;
+        animation: 0.2s swift-up ease-out forwards;
+        font-weight: bold;
+        font-size: 4.5em;
+        overflow: hidden;
+        span {
+            position: relative;
+            top: 0.8em;
+            animation: 0.5s swift-up ease-out forwards;
+            overflow: hidden;
+            i {
+                font-style: normal;
+                position: relative;
+                top: 2.8em;
+                animation: 0.8s swift-up ease-out forwards;
+            }
+        }
+    }
+    .sub-title {
+        font-size: 2em;
+        position: relative;
+        top: 0.8em;
+        opacity: 0;
+        animation: 0.3s fade-in ease-out forwards,
+            0.3s swift-up ease-out forwards;
+    }
+    @keyframes swift-up {
+        to {
+            top: 0;
+        }
+    }
+    @keyframes fade-in {
+        to {
+            opacity: 1;
+        }
+    }
+}
