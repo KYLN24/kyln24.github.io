@@ -2,8 +2,11 @@ const app = new Vue({
     el: "#app",
     data: {
         titleWord: {
-            title: [["Hello,"], ["I'm", "KYLN24"]],
-            subTitle: [["Welcome", "to", "my", "homepage!"]],
+            title: [["Hello,"], ["This", "is", "KYLN24"]],
+            subTitle: [
+                ["Welcome", "to", "my", "homepage!"],
+                ["Have", "a", "nice", "day!"],
+            ],
         },
         mainNav: [
             {
