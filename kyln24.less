@@ -5,8 +5,12 @@
         list-style: none;
         transform: skewX(-10deg);
         li {
+            position: relative;
+            right: -3em;
+            opacity: 0;
+            animation: 0.2s slide-in ease-out forwards;
             cursor: pointer;
-            margin: 10px;
+            margin: 15px;
             transform: skewX(10deg);
             &::before {
                 transition: 0.2s;
@@ -39,7 +43,9 @@
             &:hover {
                 &::before {
                     transition: 0.2s;
-                    box-shadow: 7px 7px 14px #4488cfb0;
+                    box-shadow: 10px 10px 20px #388be4b0;
+                    left: -5px;
+                    top: -5px;
                 }
                 .sub-title {
                     transition: 0.5s;
@@ -53,6 +59,12 @@
             }
         }
     }
+    @keyframes slide-in {
+        to {
+            opacity: 1;
+            right: 0;
+        }
+    }
 }
 
 .ky-main-title {
@@ -62,7 +74,7 @@
         top: 0.8em;
         animation: 0.2s swift-up ease-out forwards;
         font-weight: bold;
-        font-size: 4.5em;
+        font-size: 4em;
         overflow: hidden;
         span {
             position: relative;
@@ -78,7 +90,7 @@
         }
     }
     .sub-title {
-        font-size: 2em;
+        font-size: 1.5em;
         position: relative;
         top: 0.8em;
         opacity: 0;

@@ -55,6 +55,7 @@
                         v-for="item in mainNav"
                         :key="item.id"
                         @click="window.location.assign(item.link)"
+                        :style="'animation-delay: ' + (titleWord.title.length * 0.4 + item.id * 0.1) + 's; '"
                     >
                         <span class="title">{{ item.title }}</span>
                         <span class="sub-title">{{ item.subTitle }}</span>
