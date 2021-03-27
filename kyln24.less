@@ -1,0 +1,56 @@
+.ky-main-nav {
+    right: 36px;
+    bottom: 10px;
+    ul {
+        list-style: none;
+        transform: skewX(-10deg);
+        li {
+            cursor: pointer;
+            margin: 10px;
+            transform: skewX(10deg);
+            &::before {
+                transition: 0.2s;
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transform: skewX(-15deg);
+                background-color: rgb(169, 209, 255);
+                z-index: -1;
+            }
+            .title {
+                transition: 0.5s;
+                display: block;
+                position: relative;
+                bottom: -0.3em;
+                left: 0em;
+                color: #007bff;
+                font-size: 2.5em;
+            }
+            .sub-title {
+                transition: 0.5s;
+                font-size: 1em;
+                display: block;
+                color: #002d5e;
+                opacity: 0;
+            }
+            &:hover {
+                &::before {
+                    transition: 0.2s;
+                    box-shadow: 7px 7px 14px #4488cfb0;
+                }
+                .sub-title {
+                    transition: 0.5s;
+                    opacity: 1;
+                }
+                .title {
+                    transition: 0.5s;
+                    bottom: 0;
+                    left: -0.2em;
+                }
+            }
+        }
+    }
+}
