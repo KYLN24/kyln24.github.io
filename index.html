@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="favicon.png" />
         <title>I'm KYLN24</title>
 
         <link
@@ -14,10 +15,10 @@
             rel="stylesheet"
             href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
         />
-        <link
+        <!-- <link
             rel="stylesheet"
             href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
+        /> -->
 
         <link rel="stylesheet/less" href="index.less" />
         <link rel="stylesheet/less" href="kyln24.less" />
@@ -44,13 +45,9 @@
                 <div
                     class="sub-title"
                     v-for="(subTitleSec,secIndex) in titleWord.subTitle"
+                    :style="'animation-delay: ' + (titleWord.title.length * 0.5 + secIndex * 0.1) + 's; '"
                 >
-                    <span
-                        v-for="(word, wordIndex) in subTitleSec"
-                        :style="'animation-delay: ' + (titleWord.title.length * 0.5 + wordIndex * 0.1) + 's; '"
-                    >
-                        {{word}}</span
-                    >
+                    <span v-for="word in subTitleSec"> {{word}}</span>
                 </div>
             </div>
             <nav class="ky-main-nav">
@@ -67,10 +64,8 @@
                 </ul>
             </nav>
         </div>
-
-        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script> -->
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script> -->
         <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
         <script src="index.js"></script>
     </body>
