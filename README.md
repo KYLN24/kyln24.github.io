@@ -5,6 +5,6 @@ Hello, this is the repository of my personal homepage.
 [Development](https://kyln24-dev.vercel.app)
 
 ## To-Do
-- [ ] Better view ex on mobile.
-- [ ] add some pics.
-- [ ] some interesting affects.
+- Better view ex on mobile.
+- add some pics.
+- some interesting affects.
