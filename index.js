@@ -25,7 +25,7 @@ const app = new Vue({
                 id: 3,
                 title: "Elsewhere",
                 subTitle: "KYLN 的一隅小站",
-                link: "/elsewhere",
+                link: "/Elsewhere",
             },
             {
                 id: 4,
