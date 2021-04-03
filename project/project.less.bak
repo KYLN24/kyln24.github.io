@@ -1,0 +1,47 @@
+.app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .left-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        width: 45vw;
+        height: 100vh;
+        color: #ffffff;
+        font-size: 3em;
+        &::before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backdrop-filter: saturate(180%) blur(10px);
+            backdrop-filter: saturate(180%) blur(10px);
+            background-color: hsla(0, 0%, 52.5%, 0.5);
+        }
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 45vw;
+        // z-index: -1;
+        margin: 20px;
+        top: 20vh;
+        // flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .project {
+            margin: 10px;
+            width: 25em;
+        }
+    }
+}

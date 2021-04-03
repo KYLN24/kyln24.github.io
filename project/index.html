@@ -10,31 +10,31 @@
             rel="stylesheet"
             href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
-        />
-
         <link rel="stylesheet/less" href="project.less" />
 
         <script src="https://cdn.bootcdn.net/ajax/libs/less.js/4.1.1/less.min.js"></script>
     </head>
     <body>
         <div id="app">
-            <div class="main-top-nav">Project: 一些有趣的小玩意儿～</div>
+            <div class="left-title">
+                <div class="big-title">Project: 一些有趣的小玩意儿～</div>
+                <div class="sub-title"></div>
+            </div>
             <div class="project-container">
-                <div
-                    class="project"
-                    v-for="(proj, projId) in projects"
-                    :key="projId"
-                >
-                    <img :src="proj.icon" :alt="proj.displayName" />
-                    <img :src="proj.image" alt="proj.displayName" />
-                    {{ projId }}: {{ proj.displayName }}<br />
-                    {{ proj.projectName }}<br />
-                    {{ proj.identifier }}<br />
-                    {{ proj.description }}<br />
-                    {{ proj.repository }}<br />
+                <div class="proj-cards">
+                    <div
+                        class="project"
+                        v-for="(proj, projId) in projects"
+                        :key="projId"
+                    >
+                        <img :src="proj.icon" :alt="proj.displayName" />
+                        <img :src="proj.image" :alt="proj.displayName" />
+                        {{ projId + 1 }}: {{ proj.displayName }}<br />
+                        {{ proj.projectName }}<br />
+                        {{ proj.identifier }}<br />
+                        {{ proj.description }}<br />
+                        {{ proj.repository }}<br />
+                    </div>
                 </div>
             </div>
         </div>
