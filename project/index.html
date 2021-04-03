@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="../favicon.png" />
         <title>Project - KYLN24</title>
 
         <link
@@ -17,8 +18,8 @@
     <body>
         <div id="app">
             <div class="left-title">
-                <div class="big-title">Project: 一些有趣的小玩意儿～</div>
-                <div class="sub-title"></div>
+                <div class="big-title">Project</div>
+                <div class="sub-title">一些有趣的小玩意儿～</div>
             </div>
             <div class="project-container">
                 <div class="proj-cards">
@@ -27,8 +28,20 @@
                         v-for="(proj, projId) in projects"
                         :key="projId"
                     >
-                        <img :src="proj.icon" :alt="proj.displayName" />
-                        <img :src="proj.image" :alt="proj.displayName" />
+                        <img
+                            class="project-icon"
+                            :src="'assets/proj-icon/'+proj.projectName+'.png'"
+                            :alt="proj.displayName"
+                            width="52"
+                            height="52"
+                            loading="lazy"
+                        />
+                        <img
+                            class="project-image"
+                            :src="'assets/proj-img/'+proj.projectName+'.png'"
+                            :alt="proj.displayName"
+                            loading="lazy"
+                        />
                         {{ projId + 1 }}: {{ proj.displayName }}<br />
                         {{ proj.projectName }}<br />
                         {{ proj.identifier }}<br />

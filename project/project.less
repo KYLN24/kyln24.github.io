@@ -1,27 +1,94 @@
-.left-title {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 35vw;
-    text-align: center;
-    justify-content: center;
-}
-.project-container {
-    position: fixed;
-    left: 36vw;
-    height: 100vh;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    overflow: hidden;
-    .proj-cards {
-        overflow: scroll;
-        .project {
-            display: flex;
-            margin: 20px;
-            padding: 10px;
-            width: 60vw;
+#app {
+    .left-title {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 35vw;
+        text-align: center;
+        justify-content: center;
+        font-family: monospace;
+        top: 100vh;
+        animation: show-up 0.7s ease-out forwards;
+        @keyframes show-up {
+            to {
+                top: 0;
+            }
+        }
+        * {
+            animation: fade-in 0.5s ease-out forwards;
+            animation-delay: 0.4s;
+            opacity: 0;
+            @keyframes fade-in {
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+        .big-title {
+            font-size: 2em;
+        }
+        .sub-title {
+            font-size: 1.5em;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 100%;
+                right: 100%;
+                bottom: -10px;
+                border: solid rgb(99, 161, 231);
+                border-width: 0 0 3px 0;
+                animation: underline-show-up 0.5s ease-out forwards;
+                animation-delay: 0.5s;
+            }
+            @keyframes underline-show-up {
+                to {
+                    left: 20%;
+                    right: 20%;
+                }
+            }
+        }
+    }
+    .project-container {
+        position: fixed;
+        left: 36vw;
+        height: 100vh;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        overflow: hidden;
+        .proj-cards {
+            overflow: scroll;
+            .project {
+                background-color: rgba(255, 255, 255, 0.6);
+                border-radius: 24px;
+                width: 60vw;
+
+                position: relative;
+                right: 20px;
+                margin: 30px;
+                padding: 10px;
+
+                display: flex;
+                text-align: center;
+                justify-content: center;
+
+                backdrop-filter: saturate(180%) blur(20px);
+                .project-icon {
+                    position: relative;
+                    top: -24px;
+                    border-radius: 50%;
+                }
+                .project-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
     }
 }
